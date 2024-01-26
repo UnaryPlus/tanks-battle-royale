@@ -52,7 +52,7 @@ export default class extends Phaser.Scene {
     this.addPlayer(name)
     this.socket.on("update", (data) => this.updatePlayer(data))
     this.socket.on("shoot", (id) => this.addBullet(id))
-    this.socket.on("disconnect", (id) => this.removePlayer(id))
+    this.socket.on("disconnection", (id) => this.removePlayer(id))
   }
 
   addCrates(){

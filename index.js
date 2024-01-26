@@ -20,7 +20,7 @@ io.on("connection", (socket) => {
   })
 
   socket.on("disconnect", () => {
-    io.emit("disconnect", socket.id)
+    io.emit("disconnection", socket.id)
   })
 })
 
